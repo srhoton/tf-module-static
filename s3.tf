@@ -17,7 +17,7 @@ resource "aws_s3_bucket_policy" "read_static_origin_bucket" {
 }
 
 resource "aws_s3_object" "images" {
-  for_each = fileset("${path.module}/images", "*")
+  for_each = fileset("${path.root}/images", "*")
   bucket = aws_s3_bucket.static_origin_bucket.id
   key    = "static/${each.value}"
   source = "images/${each.value}"
