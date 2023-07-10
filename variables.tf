@@ -1,28 +1,3 @@
-
-#variable "cloudfront_logs_enabled" {
-#  type        = bool
-#  default     = false
-#  description = "Controls whether logs are enabled on the CloudFront distribution.  If enabled, module also creates the bucket where logs are delivered"
-#}
-
-#variable "cloudfront_logs_enable_cookies" {
-#  type        = bool
-#  default     = false
-#  description = "Controls whether cookies are included in CloudFront logs.  Only available if 'cloudfront_logs_enabled' is true"
-#}
-
-#variable "cloudfront_subdomain" {
-#  type        = string
-#  default     = "app"
-#  description = "Subdomain for the CloudFront distribution.  e.g. '<subdomain>.<domain>.com'"
-#}
-
-#variable "wildcard_cloudfront_subdomains" {
-#  type        = bool
-#  default     = false
-#  description = "Controls whether to wildcard subdomains for the CloudFront distribution.  e.g. '*.<subdomain>.<domain>.com' if enabled, or '<subdomain>.<domain>.com' if disabled"
-#}
-
 variable "env" {
   type        = string
   description = "Describes which environment this belongs to.  Typically one of [dev, tst, stg, prd]"
